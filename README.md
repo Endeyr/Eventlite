@@ -13,5 +13,12 @@ Technologies Used
 Ruby on Rails
 
 Notable Gems Used
+Devise
+Bulma
+Simple Forms
+Guard
 
 To-Do
+Fix Date for Events
+Add associations
+User's Page

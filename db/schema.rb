@@ -10,28 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_15_134116) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_15_131150) do
   create_table "events", force: :cascade do |t|
     t.text "event"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-  end
-
-  create_table "schedules", force: :cascade do |t|
-    t.string "schedulable_type"
-    t.integer "schedulable_id"
-    t.date "date"
-    t.time "time"
-    t.string "rule"
-    t.string "interval"
-    t.text "day"
-    t.text "day_of_week"
-    t.datetime "until"
-    t.integer "count"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["schedulable_type", "schedulable_id"], name: "index_schedules_on_schedulable"
   end
 
   create_table "users", force: :cascade do |t|

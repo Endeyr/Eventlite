@@ -1,4 +1,3 @@
 class Event < ApplicationRecord
-  acts_as_schedulable :schedule
-  belongs_to :user
+  belongs_to :user, foreign_key: "creator"
 end

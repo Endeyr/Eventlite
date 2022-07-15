@@ -64,8 +64,6 @@ gem 'coffee-rails', '~> 5.0'
 gem 'simple_form', '~> 5.1'
 
 # Handling recurring events in rails.
-gem 'ice_cube', '~> 0.16.4'
-gem 'schedulable', '~> 0.0.10'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
