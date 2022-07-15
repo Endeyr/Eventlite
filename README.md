@@ -10,6 +10,8 @@ Solutions
 Notable Features
 
 Technologies Used
-Ruby on Rails Tailwind
+Ruby on Rails
 
 Notable Gems Used
+
+To-Do
