@@ -9,9 +9,6 @@ gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -62,6 +59,8 @@ gem 'bulma-rails', '~> 0.9.3'
 gem 'coffee-rails', '~> 5.0'
 
 gem 'simple_form', '~> 5.1'
+
+gem 'pg', '~> 1.4', '>= 1.4.1'
 
 # Handling recurring events in rails.
 
