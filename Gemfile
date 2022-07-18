@@ -69,6 +69,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "sqlite3", "~> 1.4"
   gem "web-console"
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'guard', '~> 2.18'
