@@ -62,7 +62,7 @@ gem 'simple_form', '~> 5.1'
 
 gem 'pg', '~> 1.4', '>= 1.4.1'
 
-gem 'webpacker', '~> 5.4', '>= 5.4.3'
+# gem 'webpacker', '~> 5.4', '>= 5.4.3'
 
 # Handling recurring events in rails.
 
