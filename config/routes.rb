@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  resources :users
   devise_scope :user do
     # Redirests signing out users back to sign-in
     get "users", to: "devise/sessions#new"
   end
-  devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :events
+  get '/user/:id', to: 'users#profile', as: :user
+  resources :users, only: :index
   root 'events#index'
-  get '*path' => redirect('/')
+  resources :events do
+    member do
+      get 'rsvp'
+      get 'cancel_rsvp'
+    end
+  end
+  devise_for :users
 end

@@ -1,10 +1,22 @@
-<%= simple_form_for(@event) do |f| %>
-<%= f.error_notification %>
-<div class="field">
-  <div class="control">
-    <%= f.input :event, label: "Create an event", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "Create a new event...", autofocus: true %>
-    <%= f.input :schedule, label: "Pick a date", input_html: { class: "textarea "}, wrapper: false, label_html: {class: "label"}, placeholder: "When will you hold this event", autofocus: true %>
+<%= form_with model: @event, local: true do |f| %>
+  <% if @event.errors.any? %>
+    <ul>
+      <% @event.errors.full_messages.each do |error| %>
+        <li> <%= error %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="form-group">
+    <%= f.text_field :title, placeholder: "Event title", class: "form-control"  %>
   </div>
-</div>
-<%= f.button :submit, class: "button is-info" %>
+  <div class="form-group">
+    <%= f.text_area :description, placeholder: "Event description", class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :location, placeholder: "Event location", class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.datetime_field :date_time, class: "form-control"  %>
+  </div>
+  <%= f.submit class: "btn btn-outline-primary" %>
 <% end %>
